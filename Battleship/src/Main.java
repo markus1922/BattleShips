@@ -25,8 +25,8 @@ class Board {
 
         columnOne = startColumn;
         columnTwo = startColumn + 1;
-        columnThree = startcolumn = startColumnn + 2;
-        columnFour = startcolumn + 3;
+        columnThree = startColumn = startColumn + 2;
+        columnFour = startColumn + 3;
         columnFive = startColumn + 4;
     }
 
@@ -41,7 +41,7 @@ class Board {
                 if (columnFive == idx && a[columnFive] == 5) ++hits;
             }
         }
-        if (shipRow = "b") {
+        if (shipRow == "b") {
             for (int idx = 0; idx < 10; ++idx) {
                 if (columnOne == idx && b[columnOne] == 5) ++hits;
                 if (columnTwo == idx && b[columnTwo] == 5) ++hits;
@@ -50,43 +50,43 @@ class Board {
                 if (columnFive == idx && b[columnFive] == 5) ++hits;
             }
         }
-        if (shipRow = "c") {
+        if (shipRow == "c") {
             for (int idx = 0; idx < 10; ++idx) {
                 if (columnOne == idx && c[columnOne] == 5) ++hits;
-                if (columnTwo == idx && c[columntwo] == 5) ++hits;
+                if (columnTwo == idx && c[columnTwo] == 5) ++hits;
                 if (columnThree == idx && c[columnThree] == 5) ++hits;
                 if (columnFour == idx && c[columnFour] == 5) ++hits;
                 if (columnFive == idx && c[columnFive] == 5) ++hits;
             }
         }
-        if (shipRow = "d") {
+        if (shipRow == "d") {
             for (int idx = 0; idx < 10; ++idx) {
                 if (columnOne == idx && d[columnOne] == 5) ++hits;
-                if (columntwo == idx && d[columnTwo] == 5) ++hits;
+                if (columnTwo == idx && d[columnTwo] == 5) ++hits;
                 if (columnThree == idx && d[columnThree] == 5) ++hits;
                 if (columnFour == idx && d[columnFour] == 5) ++hits;
-                if (columndFive == idx & d[columnFive] == 5) ++hits;
+                if (columnFive == idx & d[columnFive] == 5) ++hits;
             }
         }
-        if (shipRow = "e") {
+        if (shipRow == "e") {
             for (int idx = 0; idx < 10; ++idx) {
                 if (columnOne == idx && e[columnOne] == 5) ++hits;
-                if (columntwo == idx && e[columnTwo] == 5) ++hits;
+                if (columnTwo == idx && e[columnTwo] == 5) ++hits;
                 if (columnThree == idx && e[columnThree] == 5) ++hits;
-                if (columndFour == idx && e[columnFour] == 5) ++hits;
+                if (columnFour == idx && e[columnFour] == 5) ++hits;
                 if (columnFive == idx && e[columnFive] == 5) ++hits;
             }
         }
-        if (shipRow = "f") {
+        if (shipRow =="f") {
             for (int idx = 0; idx < 10; ++idx) {
                 if (columnOne == idx && f[columnOne] == 5) ++hits;
-                if (columntwo == idx && f[columntwo] == 5) ++hits;
+                if (columnTwo == idx && f[columnTwo] == 5) ++hits;
                 if (columnThree == idx && f[columnThree] == 5) ++hits;
                 if (columnFour == idx && f[columnFour] == 5) ++hits;
                 if (columnFive == idx && f[columnFive] == 5) ++hits;
             }
         }
-        if (shipRow = "g") {
+        if (shipRow == "g") {
             for (int idx = 0; idx < 10; ++idx) {
                 if (columnOne == idx && g[columnOne] == 5) ++hits;
                 if (columnTwo == idx && g[columnTwo] == 5) ++hits;
@@ -97,8 +97,8 @@ class Board {
         }
         if (shipRow == "h") {
             for (int idx = 0; idx < 10; ++idx) {
-                if (columnOne == idx && h[ColumnOne] == 5) ++hits;
-                if (columnTwo == idx && h[ColumnTwo] == 5) ++hits;
+                if (columnOne == idx && h[columnOne] == 5) ++hits;
+                if (columnTwo == idx && h[columnTwo] == 5) ++hits;
                 if (columnThree == idx && h[columnThree] == 5) ++hits;
                 if (columnFour == idx && h[columnFour] == 5) ++hits;
                 if (columnFive == idx && h[columnFive] == 5) ++hits;
