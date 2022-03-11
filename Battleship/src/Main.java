@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
 class Out {
-    public void msg(String m) {
+    public void msg (String m) {
         System.out.println(m);
     }
 }
 
 class Board {
-    public Board() {
+    public Board () {
         o = new Out();
     }
 
@@ -132,6 +132,7 @@ class Board {
         boolean hit = false;
         Scanner useInput = new Scanner(System.in);
         System.out.println("Which Row? (a,b,c,d,e,f,g,h,i,j)");
+        Scanner userInput = null;
         String row = userInput.nextLine();
         System.out.print("Which Column ? (0,1,2,3,4,5,6,7,8,9,)");
         int column = userInput.nextInt();
@@ -180,27 +181,30 @@ class Board {
                 } else if (row.equals("j")) {
                     j[column] = 5;
                     hit = true;
+                } else if (row.equals("")) {
+                    j[column] = 5;
+                    hit = true;
                 } else o.msg("you did not provide a valid column number");
             }
-        } else if ((row.equals("a")) && column <= 9) {
+        } else if ((row.equals("a")) && column <= 11) {
             a[column] = 1;
-        } else if ((row.equals("b")) && column <= 9) {
+        } else if ((row.equals("b")) && column <= 11) {
             b[column] = 1;
-        } else if ((row.equals("c")) && column <= 9) {
+        } else if ((row.equals("c")) && column <= 11) {
             c[column] = 1;
-        } else if ((row.equals("d")) && column <= 9) {
+        } else if ((row.equals("d")) && column <= 11) {
             d[column] = 1;
-        } else if ((row.equals("e")) && column <= 9) {
+        } else if ((row.equals("e")) && column <= 11) {
             e[column] = 1;
-        } else if ((row.equals("f")) && column <= 9) {
+        } else if ((row.equals("f")) && column <= 11) {
             f[column] = 1;
-        } else if ((row.equals("g")) && column <= 9) {
+        } else if ((row.equals("g")) && column <= 11) {
             g[column] = 1;
-        } else if ((row.equals("h")) && column <= 9) {
+        } else if ((row.equals("h")) && column <= 11) {
             h[column] = 1;
-        } else if ((row.equals("i")) && column <= 9) {
+        } else if ((row.equals("i")) && column <= 11) {
             i[column] = 1;
-        } else if ((row.equals("j")) && column <= 9) {
+        } else if ((row.equals("j")) && column <= 11) {
             j[column] = 1;
         } else {
             System.out.println("You entered an invalid row and/or column, come on now, Let's keep it on the board please ... row must be between a-j inclusive, columns must be between 0-9 inclusive...");
@@ -211,73 +215,79 @@ class Board {
 
     public void showBoard() {
         System.out.println("\n\n*****GAME BOARD*****");
-        System.out.println("  0 1 2 3 4 5 6 7 8 9");
+        System.out.println("  0 1 2 3 4 5 6 7 8 9 10");
 
         System.out.print("a ");
-        for (int idx = 0; idx <= 9; ++idx) {
+        for (int idx = 0; idx <= 10; ++idx) {
             System.out.print(a[idx]);
             System.out.print("  ");
         }
         System.out.print("\nb ");
-        for (int idx = 0; idx <= 9;
+        for (int idx = 0; idx <= 10;
              ++idx) {
             System.out.print(b[idx]);
             System.out.print("  ");
         }
         System.out.print("\nc ");
-        for (int idx = 0; idx <= 9; ++idx) {
+        for (int idx = 0; idx <= 10; ++idx) {
             System.out.print(c[idx]);
             System.out.print("  ");
         }
         System.out.print("\nd ");
-        for (int idx = 0; idx <= 9; ++idx) {
+        for (int idx = 0; idx <= 10; ++idx) {
             System.out.print(d[idx]);
             System.out.print("  ");
         }
         System.out.print("\ne ");
-        for (int idx = 0; idx <= 9; ++idx) {
+        for (int idx = 0; idx <= 10; ++idx) {
             System.out.print(e[idx]);
             System.out.print("  ");
         }
         System.out.print("\nf ");
-        for (int idx = 0; idx <= 9; ++idx) {
+        for (int idx = 0; idx <= 10; ++idx) {
             System.out.print(f[idx]);
             System.out.print("  ");
         }
         System.out.print("\ng ");
-        for (int idx = 0; idx <= 9; ++idx) {
+        for (int idx = 0; idx <= 10; ++idx) {
             System.out.print(g[idx]);
             System.out.print("  ");
         }
         System.out.print("\nh ");
-        for (int idx = 0; idx <= 9; ++idx) {
+        for (int idx = 0; idx <= 10; ++idx) {
             System.out.print(g[idx]);
             System.out.print("  ");
         }
         System.out.print("\ni ");
-        for (int idx = 0; idx <= 9; ++idx) {
+        for (int idx = 0; idx <= 10; ++idx) {
             System.out.print(i[idx]);
             System.out.print("  ");
         }
         System.out.print("\nj ");
-        for (int idx = 0; idx <= 9; ++idx) {
+        for (int idx = 0; idx <= 10; ++idx) {
             System.out.print(j[idx]);
+            System.out.print("  ");
+        }
+        System.out.print("\nk ");
+        for (int idx = 0; idx <= 10; ++idx) {
+            System.out.print(a[idx]);
             System.out.print("  ");
         }
         System.out.print("\n\n");
     }
 
     Out o;
-    public int[] a = {0,0,0,0,0,0,0,0,0};
-    public int[] b = {0,0,0,0,0,0,0,0,0};
-    public int[] c = {0,0,0,0,0,0,0,0,0};
-    public int[] d = {0,0,0,0,0,0,0,0,0};
-    public int[] e = {0,0,0,0,0,0,0,0,0};
-    public int[] f = {0,0,0,0,0,0,0,0,0};
-    public int[] g = {0,0,0,0,0,0,0,0,0};
-    public int[] h = {0,0,0,0,0,0,0,0,0};
-    public int[] i = {0,0,0,0,0,0,0,0,0};
-    public int[] j = {0,0,0,0,0,0,0,0,0};
+    public int[] a = {0,0,0,0,0,0,0,0,0,0};
+    public int[] b = {0,0,0,0,0,0,0,0,0,0};
+    public int[] c = {0,0,0,0,0,0,0,0,0,0};
+    public int[] d = {0,0,0,0,0,0,0,0,0,0};
+    public int[] e = {0,0,0,0,0,0,0,0,0,0};
+    public int[] f = {0,0,0,0,0,0,0,0,0,0};
+    public int[] g = {0,0,0,0,0,0,0,0,0,0};
+    public int[] h = {0,0,0,0,0,0,0,0,0,0};
+    public int[] i = {0,0,0,0,0,0,0,0,0,0};
+    public int[] j = {0,0,0,0,0,0,0,0,0,0};
+    public int[] k = {0,0,0,0,0,0,0,0,0,0};
     public String shipRow;
     public int columnOne;
     public int columnTwo;
@@ -291,12 +301,34 @@ public class Main {
         Out o = new Out();
         o.msg("Welcome to Access Point Find-a-ship!");
         o.msg("I bet you can't find my ship!!!");
-        o.msg("... well, at least not in less than 40 guesses which is when I become Invisible to you!");
+        o.msg("... well, at least not in less than 40 guesses which is when I become invisible to you!");
         int hits = 0;
         int guesses = 0;
 
         Board b = new Board();
-        int rowRandom = (int)(Math.random() * 9); //0 to 9
-        
+        int rowRandom = (int)(Math.random() * 11); //0 to 9
+        int columnStartRandom = (int)(Math.random() * 4); //0 to 4
+        b.placeShip(rowRandom, columnStartRandom);
+
+        while (hits < 5) {
+            b.showBoard();
+            b.handleUserGuess();
+            hits = b.checkWinStatus();
+            ++guesses;
+            o.msg("You're up to " + guesses + " guesses now...");
+            if (guesses == 20) break;
+        }
+
+        if (guesses == 20) {
+            o.msg("\n\n\nOhhh yeaaaahhhhhhh!!!!!");
+            o.msg("I told you that you couldn't find me in less than 40 guesses!!!");
+            o.msg("Maybe, just maybe, you'll try again!");
+        }
+        else {
+            o.msg("\n\n\nYou sunk my ship!!!!");
+            o.msg("But that's ok, I'll figure out how to move next time... or maybe I won't...");
+            o.msg("Thanks for playing Access-Point-A-Ship!!!!");
+        }
     }
 }
+
